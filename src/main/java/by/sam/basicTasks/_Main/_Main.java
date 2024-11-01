@@ -1,6 +1,7 @@
 package by.sam.basicTasks._Main;
 
 import javax.swing.text.html.parser.Parser;
+import java.util.Arrays;
 
 public class _Main {
     public static void main(String[] args) {
@@ -223,46 +224,66 @@ public class _Main {
 
     //Написать в методе код, который заполняет массив из 10 элементов числами фибоначчи, начиная с начала ряда.
     public static void task13() {
-
+        System.out.println("task13");
+        int[] fib = new int[30];
+        fib[0] = 0;
+        fib[1] = 1;
+        for (int i = 2; i < fib.length; i++) {
+        fib [i] = fib[i-2] + fib[i-1];
+        }
+        System.out.println(Arrays.toString(fib));
     }
 
     /*Создать массив и заполнить его в цикле while заглавными
     буквами английского алфавита без использования ввода с клавиатуры.*/
     public static void task14() {
-
+        System.out.println("task14");
+        String [] alfabet = new String [26];
+        char str1 = 'A';
+        int i = 0;
+        while (i < alfabet.length) {
+            alfabet[i] = str1++ + "";
+            i++;
+        }
+        System.out.println(Arrays.toString(alfabet));
     }
 
     /*Создать массив типа float и размера 20.
     Проинициализировать его в цикле случайными значениями в диапазоне от 163.0 до 197.0 (не включая 197).*/
     public static void task15() {
-
+        System.out.println("task15");
+        float[] massive = new float[20];
+        for (int i = 0; i < massive.length; i++) {
+            massive[i] = 163 + (float) Math.round(Math.random() * 376.6) / 10;
+        }
+        System.out.println(Arrays.toString(massive));
     }
 
     public static void task16() {
-
+        System.out.println("task16");
     }
 
     public static void task17() {
-
+        System.out.println("task17");
     }
 
     public static void task18() {
-
+        System.out.println("task18");
     }
 
     public static void task19() {
-
+        System.out.println("task19");
     }
 
     public static void task20() {
-
+        System.out.println("task20");
     }
 
     public static void task21() {
-
+        System.out.println("task21");
     }
 
     public static void task22() {
-
+        System.out.println("task22");
     }
 }
