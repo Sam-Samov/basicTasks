@@ -206,6 +206,7 @@ public class _Main {
         String str1 = "Dorothy lived in the midst of the great Kansas prairies, with Uncle Henry, who was a farmer, and Aunt Em, who was a farmer's wife.";
         str1 = str1.replaceAll("[^ ]", "");
         System.out.println(str1.length());
+        System.out.println();
     }
     /*Второй способ
     String str = "Dorothy lived in the midst of the great Kansas prairies, with Uncle Henry, " +
@@ -222,23 +223,24 @@ public class _Main {
         System.out.println(++counter);
      */
 
-    //Написать в методе код, который заполняет массив из 10 элементов числами фибоначчи, начиная с начала ряда.
+    //Написать в методе код, который заполняет массив из 10 элементов числами Фибоначчи, начиная с начала ряда.
     public static void task13() {
         System.out.println("task13");
         int[] fib = new int[30];
         fib[0] = 0;
         fib[1] = 1;
         for (int i = 2; i < fib.length; i++) {
-        fib [i] = fib[i-2] + fib[i-1];
+            fib[i] = fib[i - 2] + fib[i - 1];
         }
         System.out.println(Arrays.toString(fib));
+        System.out.println();
     }
 
     /*Создать массив и заполнить его в цикле while заглавными
     буквами английского алфавита без использования ввода с клавиатуры.*/
     public static void task14() {
         System.out.println("task14");
-        String [] alfabet = new String [26];
+        String[] alfabet = new String[26];
         char str1 = 'A';
         int i = 0;
         while (i < alfabet.length) {
@@ -246,6 +248,7 @@ public class _Main {
             i++;
         }
         System.out.println(Arrays.toString(alfabet));
+        System.out.println();
     }
 
     /*Создать массив типа float и размера 20.
@@ -257,32 +260,77 @@ public class _Main {
             massive[i] = 163 + (float) Math.round(Math.random() * 376.6) / 10;
         }
         System.out.println(Arrays.toString(massive));
+        System.out.println();
     }
 
+    /*Объявить массив типа int и размера 3. Проинициализировать массив значениями 11, 22, 33.
+    Поменять значения местами так, чтобы в массиве они оказались в следующем порядке: 22 33 11.
+    Это необходимо выполнить без использования дополнительной переменной.*/
     public static void task16() {
         System.out.println("task16");
+        int[] arr = {11, 22, 33};
+        arr[2] = arr[0] + arr[1] + arr[2];
+        arr[1] = arr[2] - arr[0] - arr[1];
+        arr[0] = arr[2] - arr[0] - arr[1];
+        arr[2] = arr[2] - arr[0] - arr[1];
+        System.out.println(Arrays.toString(arr));
+        System.out.println();
     }
 
+    /*Объявить и проинициализировать переменную int x внутри метода. Написать ниже код так, чтобы если переменная == 0
+    выводился в терминал 0, если больше 0, то выводилась в терминал 1, если меньше 0, выводилась в терминал -1.
+    Код необходимо написать так, чтобы выполнялось как можно меньше вычислений условий.*/
     public static void task17() {
         System.out.println("task17");
+        int x = 0;
+        if (x < 0) x = -1;
+        else if (x > 0) x = 1;
+        else x = 0;
+        System.out.println(x);
+        System.out.println();
     }
 
+    /*Объявить в методе переменную String str1 и проинициализировать словом на английском языке длиной хотя бы 7 символов.
+    Объявить переменную String str2 и написать код, который сохранит в переменную str2 значение переменной str1
+    перевернутое из конца в начало. То есть сохранит строку с символами, написанными в обратном порядке,
+    из конца в начало. Запрещается использование методов типа revert*/
     public static void task18() {
         System.out.println("task18");
+        String str1 = "ambassador";
+        String str2 = "";
+        for (int i = str1.length()-1; i >= 0; i--) {
+            str2 = str2 + str1.substring(i, i+1);
+        }
+        System.out.println(str1);
+        System.out.println(str2);
+        System.out.println();
     }
 
+    /*Создать объект класса «Звездная система», используя классы «Планета», «Звезда», «Луна».
+    Методы: 1) выводит на консоль количество планет в звездной системе,
+    2) выводит название звезды, 3) добавляет планеты в систему.*/
     public static void task19() {
         System.out.println("task19");
     }
 
+    /*Создать объект класса «Щенок», используя классы «Животное», «Собака».
+    Методы: 1)выводит на консоль имя 2)подать голос 3)прыгать 4)бегать 5)кусать 6)пытаться снять «детский» ошейник*/
     public static void task20() {
         System.out.println("task20");
     }
 
+    /*Создать объект класса Дерево, используя классы Лист, Ветка.
+    Методы: 1)зацвести 2)опасть листьям 3)покрыться инеем 4)пожелтеть листьями.*/
     public static void task21() {
         System.out.println("task21");
     }
 
+    /*Создать класс LetterManager, принимающий в свои методы тип интерфейса.
+Создать класс Письмо. Реализовать с использованием интерфейса возможности: Добавить текст письма/удалить
+текст письма, добавить/удалить отправителя; добавить/удалить приложения к письму; поставить дату отправки;
+отправить/принять письмо; проверить адресат на существование. Реализовать код так, чтобы из метода main
+можно было вызвать LetterManager, но нельзя было обратиться к методам самого класса Письма.
+Произвести над письмом различные манипуляции из метода main.*/
     public static void task22() {
         System.out.println("task22");
     }
